@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            background: url('bgimg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .top-strip {
+            width: 100%;
+            height: 40px;
+            background: #00bcd4;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4%;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info span {
+            margin-right: 20px;
+            font-size: 17px;
+            color: #000;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            color: black;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            color: black;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            top: 20px;
+            left: 0;
+            padding: 0 4%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 9;
+            background: transparent;
+            transition: background 0.5s ease;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-logo {
+            height: 90px;
+            margin-right: 10px;
+            margin-top: 35px;
+        }
+
+        .brand-name {
+            color: #00bcd4;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            margin-top: 10px;
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            margin-left: 20px;
+            text-transform: capitalize;
+            color: #00bcd4;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+        .seven {
+            margin-top: 140px;
+            margin-bottom: 150px;
+        }
+            h2.department-title {
+                justify-content: center;
+                text-align: center;
+                font-size: 40px;
+                padding-top: 25px;
+                padding-bottom: 20px;
+                color: #00bcd4;
+            }
+
+            .department-subtitle {
+                justify-content: center;
+                text-align: center;
+                font-size: 20px;
+                padding-bottom: 20px;
+                color: #00bcd4;
+            }
+
+            .department-image {
+                margin: auto;
+                width: 882px;
+                display: block;
+                padding-left: 50px;
+                padding-top: 5px;
+                height: 30%;
+            }
+
+            .department-description {
+                padding-top: 25px;
+                margin-left: 20px;
+                font-size: 17px;
+                color: #fff;
+            }
+
+            .department-symptoms {
+                columns: 3;
+                -webkit-columns: 3;
+                -moz-columns: 3;
+                padding-bottom: 20px;
+                padding-right: 240px;
+                color: blueviolet;
+            }
+
+            h3.surgical-services-title {
+                margin-left: 10px;
+                padding-top: 20px;
+                color: #00bcd4;
+            }
+
+            .surgical-services-list {
+                color: blueviolet;
+            }
+
+            .neuropsychological-services {
+                color: #00bcd4;
+            }
+
+            .neuropsychological-list {
+                color: blueviolet;
+            }
+
+            h2.team-title {
+                font-size: 40px;
+                margin-left: 20px;
+                padding-top: 15px;
+                color: #00bcd4;
+            }
+
+            .cover {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 40px;
+                padding-left: 50px;
+            }
+
+            .box {
+                width: 300px;
+                height: 400px;
+                margin: 10px;
+                box-shadow: -1px 0 10px #0000;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .box1 {
+                width: 300px;
+                height: 400px;
+                margin: 10px;
+                box-shadow: -1px 0 10px #0000;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .box2 {
+                width: 300px;
+                height: 400px;
+                margin: 10px;
+                box-shadow: -1px 0 10px #0000;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .box3 {
+                width: 300px;
+                height: 400px;
+                margin: 10px;
+                box-shadow: -1px 0 10px #0000;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .team-image {
+                width: 300px;
+                height: 200px;
+                display: inline-block;
+            }
+
+            .team-description {
+                padding: 10px;
+                text-align: center;
+                color: #fff;
+            }
+            .container3{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    background-color: #00bcd4;
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+     color: #000;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #000;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #000;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{  
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000;
+    text-decoration: none;
+    font-weight: 300;
+    color: #000;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #000;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #fff;
+    background-color: #000;
+  }
+
+  .content1{
+    font-size: 20px;
+    border: #000;
+  }
+  .main button{
+    border-radius: 14px;
+  }
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+        </style>
+    </head>
+    <body>
+        <div class="top-strip">
+        <div class="contact-info">
+            <span>Email: info@lifecarehospital.com</span>
+            <span>Phone: +123 456 7890</span>
+            <span>Address: MIDC Hadapsar, Pune-411028</span>
+        </div>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="brand-container">
+            <img src="logo.png" class="brand-logo" alt="">
+            <div class="brand-name"><b>LifeCare Hospital</b></div>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-items"><a href="index.html">Back</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+<div class="seven">
+        <div class="first-section">
+
+            <h2 class="department-title">Life care Department of Liver Diseases</h2>
+            <h5 class="department-subtitle">Liver Diseases surgery || Liver Diseases || Fetal Medicine ||</h5>
+            <br>
+            <img class="department-image"
+                src="https://solutionpharmacy.in/wp-content/uploads/2021/05/Structure-of-liver-1-1024x904.jpg">
+
+            <p class="department-description">Liver disease is a general term that refers to any condition
+                affecting your liver.<br>
+                These conditions may develop for different reasons, but they can
+                all damage your liver and affect its function.<br>
+                Your liver is a vital organ that performs hundreds of tasks
+                related to metabolism, energy storage, and waste filtering.
+                <br> It helps you digest food, convert it to energy, and store
+                the energy until you need it. It also helps filter toxic
+                substances out of your bloodstream.
+
+            </p>
+
+            <h6 class="department-symptoms">What are the general symptoms?</h6>
+            <p class="department-symptoms">
+                Liver disease symptoms vary, depending on the underlying cause.
+                It’s also possible for someone to have liver disease and not
+                have any symptoms at all. However, Hepatitis NSW says that a few
+                general symptoms can indicate some kind of severe liver damage.
+                <br>
+                These include:<br>
+
+                yellowish skin and eyes, known as jaundice <br>
+                pale, bloody, or black stools <br>
+                enlarged stomach due to ascites, which may make it uncomfortable
+                to lie down or eat <br>
+                encephalopathy, a brain issue resulting in marked changes in
+                mood, sleep, and cognition
+
+            </p>
+
+            <h6 class="department-symptoms">Hepatitis</h6>
+            <p class="department-symptoms"> Hepatitis is defined as an inflammation of the liver. <br>
+                When that inflammation is caused by a virus, it’s referred to as
+                viral hepatitis. <br>
+                Hepatitis can cause liver damage, making it difficult for your
+                liver to function as it should. <br>
+                Most types of viral hepatitis are contagious, but you can reduce
+                your risk by getting vaccinated for types A and B . <br>
+                By taking other preventive steps, including using a condom
+                during sex and not sharing needles.
+            </p>
+
+            <h6 class="department-symptoms">Five types of hepatitis include:
+            </h6>
+            <p class="department-symptoms">Hepatitis A. Hepatitis A is typically spread through contact with
+                contaminated food or water. Symptoms may clear up without
+                treatment, but recovery can take a few weeks.<br> <br>
+                Hepatitis B. This type of viral hepatitis can be acute
+                (short-term) or chronic (long-term). It’s spread through bodily
+                fluids, such as blood and semen. While hepatitis B is treatable,
+                there’s no cure for it. Early treatment is key to avoiding
+                complications, so it’s best to get regular screenings if you’re
+                at risk.<br> <br>
+                Hepatitis C. Hepatitis C can also be acute or chronic. It’s
+                often spread through contact with blood from someone with
+                hepatitis C. While it often doesn’t cause symptoms in its early
+                stages, it can lead to permanent liver damage in its later
+                stages.<br> <br>
+                Hepatitis D. This is a serious form of hepatitis that only
+                develops in people with hepatitis B — it can’t be contracted on
+                its own. It can also be either acute or chronic.<br> <br>
+                Hepatitis E. Hepatitis E is usually caused by drinking
+                contaminated water. Generally, it clears up on its own within a
+                few weeks without any lasting complications. <br> <br>
+
+            </p>
+
+            <h6 class="department-symptoms">Fatty liver disease</h6>
+            <p class="department-symptoms">Fat buildup in the liver can lead to fatty liver disease.<br>
+                There are two types of fatty liver disease. These two types can
+                manifest alone, or they can overlap: <br> <br>
+                alcoholic fatty liver disease, which is caused by heavy alcohol
+                consumption
+                nonalcoholic fatty liver disease, which is caused by other
+                factors experts are still trying to understand
+                Without management, both types of fatty liver disease can cause
+                liver damage, leading to cirrhosis and liver failure.
+                <br> <br> Diet and other lifestyle changes can often improve
+                symptoms and lower your risk of complications.</p>
+
+            <h6 class="department-symptoms">Autoimmune conditions</h6>
+            <p class="department-symptoms">Autoimmune conditions involve your immune system mistakenly
+                attacking healthy cells in your body.
+                <br> <br> Several autoimmune conditions involve your immune
+                system attacking cells in your liver,<br> <br>
+                including:<br>
+                Autoimmune hepatitis.
+                <br> This condition causes your immune system to attack your
+                liver, resulting in inflammation.
+                <br>Without treatment, it can lead to cirrhosis and liver
+                failure. <br>
+                Primary biliary cirrhosis (PBC).
+                <br> This results from damage to the bile ducts in your liver,
+                causing a buildup of bile.
+                <br> PBC can eventually lead to cirrhosis and liver failure.
+                Primary sclerosing cholangitis. This inflammatory condition
+                causes gradual damage to your bile ducts.
+                <br> They eventually become blocked, causing bile to build up in
+                your liver.
+                <br> This can lead to cirrhosis or liver failure.</p>
+        </div>
+
+        <h2 class="team-title">Team of Liver Diseases</h2>
+        <div class="cover">
+            <div class="box">
+                <img
+                    src="https://tse1.mm.bing.net/th?id=OIP.rzvJIIoK4rs7kpN44Q5YegHaE8&pid=Api&rs=1&c=1&qlt=95&w=186&h=124"
+                    alt>
+
+                <p class="team-description">loreDr. Chidambaramurthy Udaya Shankar
+                    Senior Consultant -
+                    <br> Neurology
+                    <br>
+                    DM (Neurology)
+                    Speciality
+                    Department - Institute of Neurosciences</p>
+            </div>
+
+            <div class="box1">
+
+                <img
+                    src="https://www.sakraworldhospital.com/doctor-images/dr-c-udaya-shankar-brain-tumor-doctor-in-bangalore.png"
+                    alt>
+
+                <p class="team-description"> Dr. Abinash Dutta
+                    Associate Consultant - Neurosurgery
+                    MS (General Surgery), M.CH (Neurosurgery)
+                    <br>
+                    Speciality
+                    Department -<br> Institute of Neurosciences</p>
+            </div>
+            <div class="box2">
+                <img
+                    src="https://www.sakraworldhospital.com/doctor-images/dr-n-chandrashekar-best-doctor-for-brain-tumor-treatmnet.png"
+                    alt>
+
+                <p class="team-description"> Dr. N Chandrashekar
+                    Consultant -<br> Neurosurgery
+                    M.CH (Neurosurgery)
+                    <br>
+                    Speciality
+                    Department -<br> Neurosurgery
+                    Book an Appointment</p>
+            </div>
+
+            <div class="box3">
+                <img
+                    src="https://tse1.mm.bing.net/th?id=OIP.Unwzw3FJ3-gpe-ydfkSJmgHaE8&pid=Api&rs=1&c=1&qlt=95&w=170&h=113"
+                    alt>
+
+                <p class="team-description">loreDr. Chidambaramurthy Udaya Shankar
+                    Senior Consultant -<br> Neurology
+                    <br>
+                    DM (Neurology)
+                    Speciality
+                    Department - Institute of Neurosciences</p>
+            </div>
+        </div>
+</div>
+        <footer class="footer">
+        <div class="container3">
+         <div class="row">
+           <div class="footer-col">
+             <h4>More Links</h4>
+             <ul>
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="index.html">about us</a></li>
+                 <li><a href="service.html">our services</a></li>
+                 <li><a href="contact.html">Contact</a></li>
+                 <li><a href="appointment.html">Book an Appointment</a></li>
+                 <li><a href="feedback.html">Feedback</a></li>
+               </ul>
+           </div>
+           <div class="footer-col">
+             <h4>Hospital location</h4>
+             <p>MIDC Pune,<br>Hadapsar- 411028,<br> pune Phone:+91 1234567890 <br>With 24-hour MD availability <br>
+                <b>email-</b>lifecare579@gmail.com</p>
+           </div>
+           <div class="footer-col">
+             <h4>Newsletter</h4>
+             <input type="email" class="content1" placeholder="Entre your Email Here">
+             <button type="submit" class="main button "style="background-color: #000;">Subcribe</button>
+             <br> <br> <br>
+             <h4>Stay Connected</h4>
+           </div>
+           <div class="footer-col">
+             <h4>follow us</h4>
+             <div class="social-links">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-linkedin-in"></i></a>
+             </div>
+           </div>
+         </div>
+        </div>
+     </footer>
+
+    </body>
+</html>

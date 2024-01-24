@@ -1,0 +1,119 @@
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            background: url('bgimg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .first-section {
+            margin-top: 140px;
+        }
+
+        h2.department-title {
+            justify-content: center;
+            text-align: center;
+            font-size: 40px;
+            padding-top: 25px;
+            padding-bottom: 20px;
+            color: #00bcd4;
+        }
+
+        .department-subtitle {
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            padding-bottom: 20px;
+            color: #00bcd4;
+        }
+
+        .department-image {
+            margin: auto;
+            width: 882px;
+            display: block;
+            padding-left: 50px;
+            padding-top: 5px;
+            height: 30%;
+        }
+
+        .department-description {
+            padding-top: 25px;
+            margin-left: 20px;
+            font-size: 17px;
+            color: #fff;
+        }
+
+        .department-symptoms {
+            columns: 3;
+            -webkit-columns: 3;
+            -moz-columns: 3;
+            padding-bottom: 20px;
+            padding-right: 240px;
+            color: blueviolet;
+        }
+
+        h3.surgical-services-title {
+            margin-left: 10px;
+            padding-top: 20px;
+            color: #00bcd4;
+        }
+
+        .surgical-services-list {
+            color: blueviolet;
+        }
+
+        .neuropsychological-services {
+            color: #00bcd4;
+        }
+
+        .neuropsychological-list {
+            color: blueviolet;
+        }
+
+        h2.team-title {
+            font-size: 40px;
+            margin-left: 20px;
+            padding-top: 15px;
+            color: #00bcd4;
+        }
+
+        .team-cover {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-left: 50px;
+        }
+
+        .team-box {
+            width: 300px;
+            height: 400px;
+            margin: 10px;
+            box-shadow: -1px 0 10px #0000;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .team-image {
+            width: 300px;
+            height: 200px;
+            display: inline-block;
+        }
+
+        .team-description {
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+        }
+    

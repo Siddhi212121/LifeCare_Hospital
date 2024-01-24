@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            background: url('bgimg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .top-strip {
+            width: 100%;
+            height: 40px;
+            background: #00bcd4;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4%;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info span {
+            margin-right: 20px;
+            font-size: 17px;
+            color: #000;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            color: black;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            color: black;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            top: 20px;
+            left: 0;
+            padding: 0 4%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 9;
+            background: transparent;
+            transition: background 0.5s ease;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-logo {
+            height: 90px;
+            margin-right: 10px;
+            margin-top: 35px;
+        }
+
+        .brand-name {
+            color: #00bcd4;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            margin-top: 10px;
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            margin-left: 20px;
+            text-transform: capitalize;
+            color: #00bcd4;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+        .first-section {
+            margin-top: 140px;
+        }
+            .header-section {
+                margin-top: 140px;
+                color: white;
+            }
+
+            h2.department-title {
+                justify-content: center;
+                text-align: center;
+                font-size: 40px;
+                padding-top: 25px;
+                padding-bottom: 20px;
+                color: #00bcd4;
+            }
+
+            .department-subtitle {
+                justify-content: center;
+                text-align: center;
+                font-size: 20px;
+                padding-bottom: 20px;
+                color: #00bcd4;
+            }
+
+            .department-image {
+                margin: auto;
+                width: 882px;
+                display: block;
+                padding-left: 50px;
+                padding-top: 5px;
+                height: 30%;
+            }
+
+            .department-description {
+                padding-top: 25px;
+                margin-left: 20px;
+                font-size: 17px;
+                color: white;
+            }
+
+            .symptoms-section {
+                columns: 3;
+                -webkit-columns: 3;
+                -moz-columns: 3;
+                padding-bottom: 20px;
+                padding-right: 240px;
+                color: white;
+            }
+
+            h3.surgical-services-title {
+                margin-left: 10px;
+                padding-top: 20px;
+                color: #00bcd4;
+            }
+
+            .surgical-services-list {
+                color: white;
+            }
+
+            .neuropsychological-services {
+                color: #00bcd4;
+            }
+
+            .neuropsychological-list {
+                color: white;
+            }
+
+            h2.team-title {
+                font-size: 40px;
+                margin-left: 20px;
+                padding-top: 15px;
+                color: #00bcd4;
+            }
+
+            .team-section {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 40px;
+                padding-left: 50px;
+            }
+
+            .team-member {
+                width: 300px;
+                height: 400px;
+                margin: 10px;
+                box-shadow: -1px 0 10px #0000;
+                justify-content: center;
+                text-align: center;
+                color: white;
+            }
+
+            .team-image {
+                width: 300px;
+                height: 200px;
+                display: inline-block;
+            }
+
+            .team-description {
+                padding: 10px;
+                text-align: center;
+                color: white;
+            }
+           h2.team-title {
+            font-size: 40px;
+            margin-left: 20px;
+            padding-top: 15px;
+            color: #00bcd4;
+        }
+
+        .team-cover {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-left: 50px;
+        }
+
+        .team-box {
+            width: 300px;
+            height: 400px;
+            margin: 10px;
+            box-shadow: -1px 0 10px #0000;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .team-image {
+            width: 300px;
+            height: 200px;
+            display: inline-block;
+        }
+
+        .team-description {
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .container3{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    background-color: #00bcd4;
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+     color: #000;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #000;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #000;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000;
+    text-decoration: none;
+    font-weight: 300;
+    color: #000;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #000;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #fff;
+    background-color: #000;
+  }
+
+  .content1{
+    font-size: 20px;
+    border: #000;
+  }
+  .main button{
+    border-radius: 14px;
+  }
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+        </style>
+    </head>
+    <body>
+        <div class="top-strip">
+        <div class="contact-info">
+            <span>Email: info@lifecarehospital.com</span>
+            <span>Phone: +123 456 7890</span>
+            <span>Address: MIDC Hadapsar, Pune-411028</span>
+        </div>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="brand-container">
+            <img src="logo.png" class="brand-logo" alt="">
+            <div class="brand-name"><b>LifeCare Hospital</b></div>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-items"><a href="index.html">Back</a></li>
+        </ul>
+    </nav>
+<div class="fifth">
+        <div class="header-section">
+
+            <h2 class="department-title">Life care Department of Renal Science</h2>
+            <h5 class="department-subtitle">Renal Surgery |Chronic renal failure|Nephrotic syndrome| kidney
+                disease
+                |<br>|Renal Cyst|
+                Pyelonephritis|
+            </h5>
+            <br>
+            <img class="department-image"
+                src="https://www.jehangirhospital.com/images/centres-of-excellence-image/coe_inside_renal_science.jpg">
+
+            <h6 class="department-description">Overview:</h6>
+            <p class="department-description"> The kidneys' function is to filter the blood. All the blood in
+                our body passes through the kidneys several times a day.
+                The kidneys remove wastes, control the body's fluid balance, and
+                regulate the balance of electrolytes.
+                As the kidneys filter blood, they create urine, which collects
+                in the kidneys' pelvis; funnel-shaped structures that drain down
+                tubes called ureters to the bladder.<br> <br>
+                Each kidney contains around a million units called nephrons,
+                each of which is a microscopic filter for blood.
+                It's possible to lose as much as 90% of kidney function without
+                experiencing any symptoms or problems.
+                <br> <br> <br>
+                Ascertaining that the Kidney is one of the most vital organs in
+                the human body, a dedicated department has been set up to
+                facilitate and treat any kind of Kidney Disorders. Some of the
+                Kidney Conditions are:
+            </p>
+
+            <li class="symptoms-section">
+                <ul>Pyelonephritis</ul>
+                <ul>Glomerulonephritis </ul>
+                <ul>Kidney stones</ul>
+                <ul>Nephrotic syndrome</ul>
+                <ul> Polycystic</ul>
+                <ul> kidney disease </ul>
+                <ul> Acute renal failure</ul>
+                <ul> Chronic renal failure</ul>
+                <ul> Diabetic nephropathy</ul>
+                <ul> Hypertensive nephropathy</ul>
+                <ul> Kidney cancer</ul>
+                <ul>Renal Cyst</ul>
+            </li>
+
+            <h6 class="department-description">Living Kidney Donor</h6>
+            <h6 class="department-description">How do family and friends know when it is time to consider
+                donation?</h6>
+
+            <p class="department-description"> When a patient loses 90 to 95 percent of his or her kidney
+                function, they are considered to have End Stage Renal Disease
+                (ESRD).
+                Treatment options for patients with ESRD are dialysis (where an
+                artificial kidney machine removes waste from the blood) or a
+                kidney transplant from a living or deceased donor. <br> <br>
+                Sometimes, a patient with 85 percent loss of kidney function
+                will undergo a transplant which allows them to avoid having to
+                go on dialysis. Kidney patients and their families will discuss
+                the best course of treatment with their doctors.
+
+            </p>
+
+            <h6 class="department-description">Pap smear and Colposcopy (for abnormal smears)</h6>
+            <p class="department-description">Pap smear is a diagnostic test of a sample of cells collected
+                from the surface of a woman's cervix
+                (the lower, narrow end of a woman's uterus) to check for
+                inflammation, infection or abnormalities
+                that can develop into cancer. A Colposcopy is a procedure in
+                which a special magnifying device
+                with a light called a colposcope is used to visually examine the
+                vagina and cervix.
+                This procedure is normally carried out after a smear result is
+                found to be abnormal as it
+                gives more information about abnormal cells that could lead to
+                cancer. The procedure can be used
+                to direct the location of where a tissue biopsy should be done
+                and it can also be used to monitor
+                treatment of cervix abnormalities. Jehangir Hospital is one of
+                the VERY FEW hospitals in Pune offering this test.
+            </p>
+
+            <h6 class="department-description">Who can be a donor?</h6>
+            <p class="department-description">Donors need to be between the ages of 18 and early 60s and can
+                include parents,
+                Grandparents, siblings, Spouse, Children, Grandchildren. An
+                ideal donor should have a
+                genuine interest in donating. Compatible blood type is no more
+                must for a donor. Donor
+                should be in good general health. Typically, someone who has
+                cancer, diabetes, kidney disease,
+                heart disease, liver disease, sickle cell disease, HIV or
+                hepatitis will not qualify to be a donor.
+                However, these diseases are not all absolute contraindications
+                to donation. Every donor will be
+                considered on an individual basis.
+            </p>
+
+            <h6 class="department-description">Do some donors have trouble making the decision to donate?</h6>
+            <p class="department-description"> The decision to donate can vary from person to person. Some
+                people make the decision instantly with few worries or concerns.
+                Other people require time to think critically and will talk with
+                close friends or family before deciding whether or not to
+                donate.
+                It is normal for some people to be afraid of donating a kidney
+                as well as to experience guilt about not wanting to be a
+                donor.<br> <br>
+                Individuals should not, under any circumstances, feel pressured
+                to donate. The only “right” decision is the one that makes the
+                donor feel comfortable. Potential donors are encouraged to speak
+                with the consultant, Transplant Coordinator living donor team if
+                they have any questions or concerns about their decision.
+            </p>
+
+            <h6 class="department-description">What is the first step to becoming a living donor?
+            </h6>
+            <p class="department-description"> Donor’s health is prim important aspect in any kind of organ
+                donation. Only after comprehensive health assessment of the
+                donor he/ she will be considered fit to donate organ to his/her
+                relative.
+            </p>
+
+            <h6 class="department-description"> What does the donor evaluation include?
+            </h6>
+            <p class="department-description"> 
+            </p>
+            <h6 class="department-description">Deceased Kidney Donors</h6>
+            <p class="department-description">
+            </p>
+
+            <h6 class="department-description">While You Wait</h6>
+            <p class="department-description"></p>
+
+            <section>
+                <table class="tab" cellpadding="5" cellspacing="5">
+                    <thead>
+                        <tr>
+                            <td rowspan="2">2020-2021</td>
+                            <td colspan="3">Kidney Transplant Permission Granted
+                                by Regional Authorization Committee</td>
+                        </tr>
+                        <tr>
+                            <td>Related</td>
+                            <td>Unrelated</td>
+                            <td>Total</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apr-20</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>May-20</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Jun-20</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Jul-20</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Aug-20</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Sep-20</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Oct-20</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Nov-20</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Dec-20</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Total</td>
+                            <td>15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        
+        <h2 class="team-title">Team of Renal Science</h2>
+        <div class="cover">
+            <div class="team-cover">
+            <div class="team-box">
+                <img class="team-image"
+                    src="https://tse1.mm.bing.net/th?id=OIP.rzvJIIoK4rs7kpN44Q5YegHaE8&pid=Api&rs=1&c=1&qlt=95&w=186&h=124"
+                    alt>
+                <p class="team-description">Dr. Chidambaramurthy Udaya Shankar Senior Consultant - Neurology
+                    DM (Neurology) Speciality Department - Institute of Neurosciences</p>
+            </div>
+
+            <div class="team-box">
+                <img class="team-image"
+                    src="https://www.sakraworldhospital.com/doctor-images/dr-c-udaya-shankar-brain-tumor-doctor-in-bangalore.png"
+                    alt>
+                <p class="team-description">Dr. Abinash Dutta Associate Consultant - Neurosurgery
+                    MS (General Surgery), M.CH (Neurosurgery) Speciality Department - Institute of Neurosciences</p>
+            </div>
+
+            <div class="team-box">
+                <img class="team-image"
+                    src="https://www.sakraworldhospital.com/doctor-images/dr-n-chandrashekar-best-doctor-for-brain-tumor-treatmnet.png"
+                    alt>
+                <p class="team-description">Dr. N Chandrashekar Consultant - Neurosurgery
+                    M.CH (Neurosurgery) Speciality Department - Neurosurgery Book an Appointment</p>
+            </div>
+
+            <div class="team-box">
+                <img class="team-image"
+                    src="https://tse1.mm.bing.net/th?id=OIP.Unwzw3FJ3-gpe-ydfkSJmgHaE8&pid=Api&rs=1&c=1&qlt=95&w=170&h=113"
+                    alt>
+                <p class="team-description">Dr. Chidambaramurthy Udaya Shankar Senior Consultant - Neurology
+                    DM (Neurology) Speciality Department - Institute of Neurosciences</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer class="footer">
+        <div class="container3">
+         <div class="row">
+           <div class="footer-col">
+             <h4>More Links</h4>
+             <ul>
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="index.html">about us</a></li>
+                 <li><a href="service.html">our services</a></li>
+                 <li><a href="contact.html">Contact</a></li>
+                 <li><a href="appointment.html">Book an Appointment</a></li>
+                 <li><a href="feedback.html">Feedback</a></li>
+               </ul>
+           </div>
+           <div class="footer-col">
+             <h4>Hospital location</h4>
+             <p>MIDC Pune,<br>Hadapsar- 411028,<br> pune Phone:+91 1234567890 <br>With 24-hour MD availability <br>
+                <b>email-</b>lifecare579@gmail.com</p>
+           </div>
+           <div class="footer-col">
+             <h4>Newsletter</h4>
+             <input type="email" class="content1" placeholder="Entre your Email Here">
+             <button type="submit" class="main button "style="background-color: #000;">Subcribe</button>
+             <br> <br> <br>
+             <h4>Stay Connected</h4>
+           </div>
+           <div class="footer-col">
+             <h4>follow us</h4>
+             <div class="social-links">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-linkedin-in"></i></a>
+             </div>
+           </div>
+         </div>
+        </div>
+     </footer>
+
+    </body>
+</html>
+

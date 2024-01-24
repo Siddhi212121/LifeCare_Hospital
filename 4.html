@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <style >
+           
+           
+         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            background: url('bgimg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .top-strip {
+            width: 100%;
+            height: 40px;
+            background: #00bcd4;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4%;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info span {
+            margin-right: 20px;
+            font-size: 17px;
+            color: #000;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            color: black;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            color: black;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            top: 20px;
+            left: 0;
+            padding: 0 4%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 9;
+            background: transparent;
+            transition: background 0.5s ease;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-logo {
+            height: 90px;
+            margin-right: 10px;
+            margin-top: 35px;
+        }
+
+        .brand-name {
+            color: #00bcd4;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            margin-top: 10px;
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            margin-left: 20px;
+            text-transform: capitalize;
+            color: #00bcd4;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+        .fourth {
+            margin-top: 140px;
+            margin-bottom: 150px;
+        }
+
+        h2.department-title {
+            justify-content: center;
+            text-align: center;
+            font-size: 40px;
+            padding-top: 25px;
+            padding-bottom: 20px;
+            color: #00bcd4;
+        }
+
+        .department-subtitle {
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            padding-bottom: 20px;
+            color: #00bcd4;
+        }
+
+        .department-image {
+            margin: auto;
+            width: 882px;
+            display: block;
+            padding-left: 50px;
+            padding-top: 5px;
+            height: 30%;
+        }
+
+        .department-description {
+            padding-top: 25px;
+            margin-left: 20px;
+            font-size: 17px;
+            color: #fff;
+        }
+
+        .department-symptoms {
+            columns: 3;
+            -webkit-columns: 3;
+            -moz-columns: 3;
+            padding-bottom: 20px;
+            padding-right: 240px;
+            color: blueviolet;
+        }
+
+        h3.surgical-services-title {
+            margin-left: 10px;
+            padding-top: 20px;
+            color: #00bcd4;
+        }
+
+        .surgical-services-list {
+            color: blueviolet;
+        }
+
+        .neuropsychological-services {
+            color: #00bcd4;
+        }
+
+        .neuropsychological-list {
+            color: blueviolet;
+        }
+
+        h2.team-title {
+            font-size: 40px;
+            margin-left: 20px;
+            padding-top: 15px;
+            color: #00bcd4;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-left: 50px;
+        }
+
+        .team-box {
+            width: 300px;
+            height: 400px;
+            margin: 10px;
+            box-shadow: -1px 0 10px #0000;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .team-image {
+            width: 300px;
+            height: 200px;
+            display: inline-block;
+        }
+
+        .team-description {
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+        }
+        .container3{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    background-color: #00bcd4;
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+     color: #000;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #000;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #000;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000;
+    text-decoration: none;
+    font-weight: 300;
+    color: #000;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #000;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #fff;
+    background-color: #000;
+  }
+
+  .content1{
+    font-size: 20px;
+    border: #000;
+  }
+  .main button{
+    border-radius: 14px;
+  }
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+    
+       </style>
+    </head>
+    <body>
+        <div class="top-strip">
+        <div class="contact-info">
+            <span>Email: info@lifecarehospital.com</span>
+            <span>Phone: +123 456 7890</span>
+            <span>Address: MIDC Hadapsar, Pune-411028</span>
+        </div>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="brand-container">
+            <img src="logo.png" class="brand-logo" alt="">
+            <div class="brand-name"><b>LifeCare Hospital</b></div>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-items"><a href="index.html">Back</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+<div class="fourth">
+        <div class="content">
+
+            <h2 class="department-title">Life care Department of Obstetric and Gynecological</h2>
+            <h5 class="department-subtitle">Obstetricand Gynecological | Hysterectomy | Endometriosis
+                treatment | Fibroids treatment
+                |<br>Urinary Incontinence treatment | Infections (UTI, Pelvic
+                inflammatory disease) treatment|
+            </h5>
+            <br>
+            <img class="department-image smooth"
+                src="https://www.jehangirhospital.com/images/centres-of-excellence-image/coe_inside_gynaecology.jpg">
+
+            <p class="department-description"> The critical Obstetric facility at Jehangir Hospital is a boon
+                for High-Risk Pregnancies.
+                Equipped as per ICU Standards and monitored round-the-clock by
+                doctors and anesthetists,
+                It also has easy access to the Operation Theatre complex.
+                Deluxe maternity suites are furnished luxuriously; labour,
+                delivery, and recovery facilities can be availed in the same
+                room.
+                The unit can accommodate up to 4 deliveries at the same time,
+                including intrapartum monitoring and monitoring of twins.
+                Dedicated neonatal resuscitation room is also available.:</p>
+
+            <h6 class="department-subtitle">Support Service:</h6>
+            <p class="department-description">The support of a fully equipped and well-staffed Neonatal
+                Intensive Care Unit has made it possible
+                to deal efficiently with all varieties of high-risk Obstetric
+                patients, including very premature deliveries.
+                An efficient blood bank with a facility of 24-hour blood
+                transfusion is of immense help in various Obstetric
+                and Gynecological emergencies where urgent blood transfusions
+                are often needed at short notice.
+            </p>
+
+            <h2 class="department-title">GYNAECOLOGY</h2>
+            <p class="department-description">Life Care Hospital is the most preferred hospital in the city of
+                Pune, Maharashtra, for maternity
+                and Gynecological services due to the quality of the consultants,
+                nursing care, and excellent infrastructure;
+                highly qualified and dedicated resident staff provides
+                round-the-clock monitoring of patients in labour and
+                provides care and support for patients at all times. <br> <br>
+
+                High-Risk Gynecological Patients are intensively monitored with
+                close co-operation between the Obstetrician, Physicians, and
+                Intensivists.<br> <br>
+
+                Laparoscopic literally means taking a look inside the abdominal
+                cavity with the help of a telescope. Nowadays, this imaging
+                technique is not restricted to just diagnosis, but the entire
+                operative procedure can be completed laparoscopically.
+                It can be availed for both Diagnostic & Surgical needs.
+                Procedures offered include laparoscopic management of ectopic
+                pregnancies, ovarian cysts, hysterectomy, removal of fibroids
+                and laparoscopic hysterectomy – For a quicker recovery.<br> <br>
+
+                Life care Hospital, Pune, has gained the reputation of being the
+                best centre in the region for Obstetrics and Gynecological
+                services over the last 7 decades.
+                Mother and child care being our focus at Jehangir, we believe
+                that every mother and baby deserves the best care possible –
+                before, during and after a precious newborn enters the
+                world.<br> <br>
+
+                There can be varied forms of complication among women before,
+                during and after giving birth to a child. Some of the commonly
+                found issues are stated below for your better understanding of
+                what we deal with on a day-to-day routine.</p>
+
+            <h6 class="department-subtitle">Hysterectomy</h6>
+
+            <p class="department-description">Having heavy, prolonged and painful periods might be due to some
+                abnormality in the uterus.
+                An abdominal hysterectomy is the removal of the uterus through a cut
+                in your lower abdomen which will offer a solution to the
+                problem.
+                The operation may include removal of the cervix; this is called
+                a total abdominal hysterectomy or TAH.
+                Sometimes the cervix is not removed; this is called a sub-total
+                abdominal hysterectomy.
+            </p>
+
+            <h6 class="department-subtitle">Pap smear and Colposcopy (for abnormal smears)</h6>
+            <p class="department-description">Pap smear is a diagnostic test of a sample of cells collected
+                from the surface of a woman's cervix
+                (the lower, narrow end of a woman's uterus) to check for
+                inflammation, infection or abnormalities
+                that can develop into cancer. A Colposcopy is a procedure in
+                which a special magnifying device
+                with a light called a colposcope is used to visually examine the
+                vagina and cervix.
+                This procedure is normally carried out after a smear result is
+                found to be abnormal as it
+                gives more information about abnormal cells that could lead to
+                cancer. The procedure can be used
+                to direct the location of where a tissue biopsy should be done
+                and it can also be used to monitor
+                treatment of cervix abnormalities. Jehangir Hospital is one of
+                the VERY FEW hospitals in Pune offering this test.
+            </p>
+
+            <h6 class="department-subtitle">Endometriosis treatment</h6>
+            <p class="department-description">Endometriosis is a chronic disease involving endometrial tissue.
+                Normally, endometrial tissue is found only inside the uterus,
+                the reproductive organ where a foetus develops. In
+                endometriosis,
+                endometrial-like tissue is found outside the uterus. It may be
+                found on organs in the abdomen,
+                pelvis or another location. Outside the uterus, the tissue
+                continues to respond to hormones.
+                It swells, breaks down, and bleeds but it is unable to pass from
+                the body during menstruation.
+                Surrounding tissue becomes inflamed, often with scarring. At
+                Jehangir, specialized gynecologists
+                attend to such problems giving you different choices of
+                treatments as applicable.
+            </p>
+
+            <h6 class="department-subtitle">Fibroids treatment</h6>
+            <p class="department-description">Fibroids are growths that form in the uterus (womb).
+                They are benign (not cancerous) and are made up of muscle fiber.
+                Fibroids can be as small as a pea and can grow as large as a
+                melon.
+                Fibroids are most common in women in their 30s and 40s and tend
+                to shrink after menopause.
+            </p>
+
+            <h6 class="department-subtitle">Urinary Incontinence treatment</h6>
+            <p class="department-description">Urinary incontinence is the loss of voluntary bladder control
+                leading to the leakage of urine.
+                It can be temporary or chronic. Incontinence is a symptom, not a
+                condition in itself.
+                In some cases, incontinence may have several different causes or
+                sometimes the cause is unclear.
+            </p>
+
+            <h6 class="department-subtitle">Infections (UTI, Pelvic inflammatory disease) treatment</h6>
+            <p class="department-description">Urinary tract infections (UTIs) which are a common problem found
+                among many women
+                consulting expert gynecologists at Jehangir are caused by
+                bacteria that invade the urinary
+                system and multiply. The infection can occur in any part of the
+                urinary system, but usually
+                starts in the urethra (a tube that carries the urine out of the
+                body). Pelvic inflammatory disease
+                (PID) is a serious infection of the female reproductive organs.
+                These include the uterus, ovaries and fallopian tubes.
+                PID can cause scar tissue to form in the pelvis and fallopian
+                tubes. This damage may result in infertility,
+                a future tubal pregnancy or chronic pelvic pain.
+            </p>
+
+        </div>
+
+        <h2 class="team-title">Team of Obstetric and Gynecological</h2>
+        <div class="team-container">
+            <div class="team-box">
+                <img
+                    src="https://tse1.mm.bing.net/th?id=OIP.rzvJIIoK4rs7kpN44Q5YegHaE8&pid=Api&rs=1&c=1&qlt=95&w=186&h=124"
+                    alt class="team-image">
+
+                <p class="team-description">loreDr. Chidambaramurthy Udaya Shankar
+                    Senior Consultant -
+                    <br> Neurology
+                    <br>
+                    DM (Neurology)
+                    Speciality
+                    Department - Institute of Neurosciences</p>
+            </div>
+
+            <div class="team-box">
+                <img
+                    src="https://www.sakraworldhospital.com/doctor-images/dr-c-udaya-shankar-brain-tumor-doctor-in-bangalore.png"
+                    alt class="team-image">
+
+                <p class="team-description"> Dr. Abinash Dutta
+                    Associate Consultant - Neurosurgery
+                    MS (General Surgery), M.CH (Neurosurgery)
+                    <br>
+                    Speciality
+                    Department -<br> Institute of Neurosciences</p>
+            </div>
+            <div class="team-box">
+                <img
+                    src="https://www.sakraworldhospital.com/doctor-images/dr-n-chandrashekar-best-doctor-for-brain-tumor-treatmnet.png"
+                    alt class="team-image">
+
+                <p class="team-description"> Dr. N Chandrashekar
+                    Consultant -<br> Neurosurgery
+                    M.CH (Neurosurgery)
+                    <br>
+                    Speciality
+                    Department -<br> Neurosurgery
+                    Book an Appointment</p>
+            </div>
+
+            <div class="team-box">
+                <img
+                    src="https://tse1.mm.bing.net/th?id=OIP.Unwzw3FJ3-gpe-ydfkSJmgHaE8&pid=Api&rs=1&c=1&qlt=95&w=170&h=113"
+                    alt class="team-image">
+
+                <p class="team-description">loreDr. Chidambaramurthy Udaya Shankar
+                    Senior Consultant -<br> Neurology
+                    <br>
+                    DM (Neurology)
+                    Speciality
+                    Department - Institute of Neurosciences</p>
+            </div>
+        </div>
+    </div>
+
+        <footer class="footer">
+        <div class="container3">
+         <div class="row">
+           <div class="footer-col">
+             <h4>More Links</h4>
+             <ul>
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="index.html">about us</a></li>
+                 <li><a href="service.html">our services</a></li>
+                 <li><a href="contact.html">Contact</a></li>
+                 <li><a href="appointment.html">Book an Appointment</a></li>
+                 <li><a href="feedback.html">Feedback</a></li>
+               </ul>
+           </div>
+           <div class="footer-col">
+             <h4>Hospital location</h4>
+             <p>MIDC Pune,<br>Hadapsar- 411028,<br> pune Phone:+91 1234567890 <br>With 24-hour MD availability <br>
+                <b>email-</b>lifecare579@gmail.com</p>
+           </div>
+           <div class="footer-col">
+             <h4>Newsletter</h4>
+             <input type="email" class="content1" placeholder="Entre your Email Here">
+             <button type="submit" class="main button "style="background-color: #000;">Subcribe</button>
+             <br> <br> <br>
+             <h4>Stay Connected</h4>
+           </div>
+           <div class="footer-col">
+             <h4>follow us</h4>
+             <div class="social-links">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-linkedin-in"></i></a>
+             </div>
+           </div>
+         </div>
+        </div>
+     </footer>
+
+    </body>
+</html>
